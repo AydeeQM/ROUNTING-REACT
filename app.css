@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 * {
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
@@ -7,7 +8,7 @@ body {
 	background: #5fcf80;
 	font-family: arial;
 	color: #576366;
-	text-transform: uppercase;
+	font-family: Roboto,sans-serif;
 }
 
 .container {
@@ -20,6 +21,8 @@ body {
 	-webkit-box-shadow: 0 3px rgba(0, 0, 0, .1);
 	box-shadow: 0 3px rgba(0, 0, 0, .1);
 	overflow: hidden;
+	padding-right: 0;
+    padding-left: 0;
 }
 
 header {

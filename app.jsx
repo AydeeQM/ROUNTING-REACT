@@ -3,7 +3,7 @@ class Home extends React.Component {
       render() {
             return (
                   <div className="main-content home">
-                        <h2>HOME</h2>
+                        <h2>Front End Course Directory</h2>
                         <p>This fun directory is a project for the <em>React Router Basics</em> course on Treehouse.</p>
                         <p>Learn front end web development and much more! This simple directory app offers a preview of our course
 					library. Choose from many hours of content, from HTML to CSS to JavaScript. Learn to code and get the
@@ -153,7 +153,7 @@ class App extends React.Component {
                                           <a href="#/teachers">Teachers</a>
                                     </li>{' '}
                                     <li>
-                                          <a href="#/repos">Repos</a>
+                                          <a href="#/repos">Courses</a>
                                     </li>
                               </ul>{' '}
 
