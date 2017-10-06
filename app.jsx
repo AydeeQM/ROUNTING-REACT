@@ -30,6 +30,19 @@ class About extends React.Component {
       }
 }
 
+class Teachers extends React.Component {
+      render() {
+            return (
+                  <div className="main-content">
+                        <h2>Teachers</h2>
+                        <p>The front end course directory lists many of the courses we teach on HTML, CSS, JavaScript and more! Be sure to
+					visit the Teachers section to view a list of our talented teachers. Or visit the Courses section and select a
+					topic -- HTML, CSS, or JavaScript -- to see a list of our courses.</p>
+                  </div>
+            );
+      }
+}
+
 class Repos extends React.Component {
       render() {
             const { route } = this.props;
@@ -102,6 +115,9 @@ class App extends React.Component {
                   case '/about':
                         Child = About;
                         break;
+                  case '/teachers':
+                        Child = Teachers;
+                        break;
                   case '/repos':
                         Child = Repos;
                         break;
@@ -123,13 +139,18 @@ class App extends React.Component {
             return (
                   <div className="container">
                         <header>
-                              <span>App</span>
+                              <span className="icn-logo">
+                                    <i class="fa fa-code" aria-hidden="true"></i>
+                              </span>
                               <ul className="main-nav">
                                     <li>
                                           <a href="#/home">Home</a>
                                     </li>{' '}
                                     <li>
                                           <a href="#/about">About</a>
+                                    </li>{' '}
+                                    <li>
+                                          <a href="#/teachers">Teachers</a>
                                     </li>{' '}
                                     <li>
                                           <a href="#/repos">Repos</a>
