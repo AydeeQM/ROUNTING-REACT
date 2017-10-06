@@ -106,6 +106,10 @@ a {
     border-radius: .3em;
 }
 
+.course-img {
+    width: 70px;
+}
+
 
 @media (min-width: 769px) {
 	body {
