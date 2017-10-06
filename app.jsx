@@ -226,7 +226,7 @@ class Repos extends React.Component {
                         });
                         break;
                   case 'javascript':
-                        CurrentList = HTMLCourses.map((item, index) => {
+                        CurrentList = JSCourses.map((item, index) => {
                               return (
                                     <li key={index} className="course media group">
                                           <img className="course-img" src={item.img_src} alt="" />
@@ -239,7 +239,7 @@ class Repos extends React.Component {
                         });
                         break;
                   default: //'html'
-                        CurrentList = JSCourses.map((item, index) => {
+                        CurrentList = HTMLCourses.map((item, index) => {
                               return (
                                     <li key={index} className="course media group">
                                           <img className="course-img" src={item.img_src} alt="" />
@@ -267,7 +267,7 @@ class Repos extends React.Component {
                                     {CurrentList}
                               </ul>
                         </div>
-                        
+
                         {/* Write routes here... */}
                   </div>
             );
@@ -278,7 +278,8 @@ class App extends React.Component {
       constructor(props) {
             super(props);
             this.state = {
-                  route: window.location.hash.substr(1)
+                  route: window.location.hash.substr(1),
+                  activo: "home"
             };
       }
       //  $(document).ready ()
@@ -288,8 +289,18 @@ class App extends React.Component {
                   //<li><a href='#/repos/html'>HTML</a></li>
                   console.log(window.location.hash.substr(1));
 
+                  if(window.location.hash.substr(1)=="/home"){
+                        this.state.activo = 'home';
+                  }else if(window.location.hash.substr(1)=="/about"){
+                        this.state.activo = 'about';
+                  }else if(window.location.hash.substr(1)=="/teachers"){
+                        this.state.activo = 'teachers';
+                  } else{
+                        this.state.activo = 'courses'; 
+                  }
+
                   this.setState({
-                        route: window.location.hash.substr(1)
+                        route: window.location.hash.substr(1),      
                   });
             });
       }
@@ -332,16 +343,16 @@ class App extends React.Component {
                                     <i className="material-icons">code</i>
                               </span>
                               <ul className="main-nav">
-                                    <li>
+                                    <li className={this.state.activo =="home"?'active':''}>
                                           <a href="#/home">Home</a>
                                     </li>{' '}
-                                    <li>
+                                    <li className={this.state.activo =="about"?'active':''}>
                                           <a href="#/about">About</a>
                                     </li>{' '}
-                                    <li>
+                                    <li className={this.state.activo =="teachers"?'active':''}>
                                           <a href="#/teachers">Teachers</a>
                                     </li>{' '}
-                                    <li>
+                                    <li className={this.state.activo =="courses"?'active':''}>
                                           <a href="#/repos">Courses</a>
                                     </li>
                               </ul>{' '}
