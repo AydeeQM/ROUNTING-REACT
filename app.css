@@ -99,6 +99,22 @@ a {
 	clear: both;
 }
 
+.course-nav a.active, .course-nav a:hover {
+    color: #fff;
+    background: #39add1;
+}
+
+.course-nav a {
+    font-size: .85em;
+    color: #7d7d7d;
+    padding: .2em .8em;
+    border-radius: .25em;
+    background: #eaebeb;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+}
+
 .teacher-img {
     border-radius: .3em;
 }
@@ -114,9 +130,7 @@ a {
 	}
 	.main-nav,
 	header {
-		display: -ms-flexbox;
 		display: flex;
-		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
 	}
 	.main-nav a {
