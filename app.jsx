@@ -215,7 +215,7 @@ class Repos extends React.Component {
                   case 'css':
                         CurrentList = CSSCourses.map((item, index) => {
                               return (
-                                    <li key={index}>
+                                    <li key={index} className="course media group">
                                           <img className="course-img" src={item.img_src} alt="" />
                                           <div>
                                                 <h3>{item.title}</h3>
@@ -228,7 +228,7 @@ class Repos extends React.Component {
                   case 'javascript':
                         CurrentList = HTMLCourses.map((item, index) => {
                               return (
-                                    <li key={index}>
+                                    <li key={index} className="course media group">
                                           <img className="course-img" src={item.img_src} alt="" />
                                           <div>
                                                 <h3>{item.title}</h3>
@@ -241,7 +241,7 @@ class Repos extends React.Component {
                   default: //'html'
                         CurrentList = JSCourses.map((item, index) => {
                               return (
-                                    <li key={index}>
+                                    <li key={index} className="course media group">
                                           <img className="course-img" src={item.img_src} alt="" />
                                           <div>
                                                 <h3>{item.title}</h3>
@@ -261,14 +261,13 @@ class Repos extends React.Component {
                                     <li><a href='#/repos/css'>CSS</a></li>
                                     <li><a href='#/repos/javascript'>JavaScript</a></li>
                               </ul>
-                              <div>
-                                    <ul>
-                                          {CurrentList}
-                                    </ul>
-                              </div>
-
                         </div>
-
+                        <div>
+                              <ul>
+                                    {CurrentList}
+                              </ul>
+                        </div>
+                        
                         {/* Write routes here... */}
                   </div>
             );
@@ -325,6 +324,7 @@ class App extends React.Component {
                   default:
                         Child = Home;
             }
+
             return (
                   <div className="container">
                         <header>

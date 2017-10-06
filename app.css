@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 * {
-	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
+	outline: 1px solid red;
 }
 
 body {
 	background: #5fcf80;
-	font-family: arial;
 	color: #576366;
 	font-family: Roboto,sans-serif;
 }
@@ -18,7 +17,6 @@ body {
 	margin: 0 auto 2em;
 	background: #fff;
 	border-radius: .5em;
-	-webkit-box-shadow: 0 3px rgba(0, 0, 0, .1);
 	box-shadow: 0 3px rgba(0, 0, 0, .1);
 	overflow: hidden;
 	padding-right: 0;
@@ -39,7 +37,6 @@ ul {
 li {
 	display: list-item;
 }
-
 
 /* STYLE HOME  */
 
@@ -152,17 +149,30 @@ a {
 		padding: .2em .8em;
 		border-radius: .25em;
 		background: #eaebeb;
-		-webkit-transition: .2s;
-		-o-transition: .2s;
 		transition: .2s;
 	}
 	a {
 		text-decoration: none;
 		color: #3b80d1;
 	}
+
 	.teacher {
 		width: 48.73%;
 		margin-bottom: 1.5em;
+	}
+
+	.teacher+.teacher {
+		margin-left: 2.54%;
+	}
+
+	.teacher:nth-child(2n+3) {
+		clear: left;
+		margin-left: 0;
+	}
+	
+	.media>div {
+		width: 85.1%;
+		margin-left: 1.5em;
 	}
 	.media>div, .media img, .teacher {
 		float: left;
